@@ -14,5 +14,10 @@ describe "cuenta de julian" {
 		cuentaDeJulian.depositar(100)
 		cuentaDeJulian.extraer(20)
 		assert.equals(55, cuentaDeJulian.saldo())
+		
+	}
+	
+	test "no puedo extraer mas que el saldo actuañ" {
+		assert.throwsException({cuentaDeJulian.extraer(20)})
 	}
 }
